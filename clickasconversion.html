@@ -11,7 +11,9 @@ function getURLParameter(name) {
     (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '',
   );
 }
+  </script>
 
+    <script>  
 function sendEvent(event) {
   var img = document.createElement('img');
   img.src = `https://' + getURLParameter('trackingdomain') + '/conversion.gif?cet=${event}&cid=${getURLParameter('cid')}`;
